@@ -44,30 +44,34 @@ namespace fao
     public class classmapping : ClassMap<cases> //With cases as base class
     {
         public classmapping  //Map class
-            {
-            Map(m => m.uuid).Name("uuid");
+        {  
+        Map( => m.uuid).Name("uuid");
         Map(m => m.datetime).Name("datetime");
         Map(m => m.species).Name("species");
         Map(m => m.number_morbidity.Name("number_morbidity");
         Map(m => m.disease_id).Name("disease_id");
         Map(m => m.number_mortality).Name("number_mortality");
         Map(m => m.total_number_cases).Name("total_number_cases");
-        Map(m => m.location).Name("location"); 
+        Map(m => m.location).Name("location");
     }
+}
 
-    public class diseasemapping : ClassMap<diseases> //With diseases as base class
-    {
-        public classmapping  //Map class
+
+public class diseasemapping : ClassMap<diseases> //With diseases as base class
+{
+    public classmapping  //Map class
             {
             Map(m => m.ID).Name("ID");
-        Map(m => m.name).Name("name");
+    Map(m => m.name).Name("name");
+}
        
     }
 
 
 
 
-}
+
+
 
 
 
