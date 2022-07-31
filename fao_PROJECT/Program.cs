@@ -8,8 +8,10 @@ using System.Globalization;
 using System.Linq;
 using CsvHelper.Configuration;     //For adding namespaces
 using CsvHelper.Configuration.Attributes;    //adding namespaces
-using Newtonsoft.Json; //Will automatically ask to install package
 using System.Collections.Generic;
+using System.Text.Json;
+using System.Text.Json.Serialization;
+
 
 namespace fao_PROJECT
 
@@ -64,14 +66,15 @@ namespace fao_PROJECT
 
             }
 
-            // Json code continues from here
-            var indicator1 = new cases
-            {
+            // Json code continues from here, didn't have time to fully implement json code, apologize for the inconvenience
+            //cases indicators1 = new cases();
+           
+            //Console.WriteLine("total number of reported cases is" +indicators1.total_number_cases);
+            //Console.WriteLine("total number of deaths reported at each location" +indicators1.number_morbidity);
 
-               
-            }
-            var json = JsonConvert.SerializeObject(input);
 
+            //string json = JsonSerializer.Serialize(indicators1);
+            //File.WriteAllText(@"F:\proj\fao_PROJECT\fao_PROJECT\soft_assignment", json);
 
         }
 
@@ -131,6 +134,8 @@ namespace fao_PROJECT
 
         public string location { get; set; }
 
+        public string message { get; set; }
+
 
     }
 
@@ -143,7 +148,10 @@ namespace fao_PROJECT
 
     }
 
+   
+
     
+
 
 
 }
